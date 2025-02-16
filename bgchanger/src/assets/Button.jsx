@@ -9,10 +9,10 @@ purple: "text-purple-500",
 black: "text-black",
 };
 
-function Button({ color, wow = "black" }) {
+function Button({ color, wow = "black" , onClick }) {
 return (
-    <div className={`cursor-pointer ${colorMap[wow] || "text-gray-500"} bg-white p-2 rounded`}>
-    {color}
+    <div className={`cursor-pointer ${colorMap[wow] || "text-gray-500"} `} onClick={onClick}>
+    {color} 
     </div>
 );
 }
