@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import './index.css'
-import Button from './assets/button.jsx'
+import Button from './Button.jsx'
 function App() {
   const [colur, setColur] = useState('red')
   return (
