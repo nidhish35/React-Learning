@@ -21,9 +21,9 @@ const users = [
 
       
       <div>
-        {users.map((user,key) =>{
+        {users.map((value,key) =>{
           return(
-            <User key = {key} name={user.name} age={user.age}/>
+            <User key = {key} name={value.name} age={value.age}/>
           );
         })}
       </div>
@@ -34,9 +34,7 @@ const users = [
 const User = (props) => {
   return(
     <div>
-      
     {props.name}, {props.age}
-            
     </div>
   );
 }
