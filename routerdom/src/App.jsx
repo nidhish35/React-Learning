@@ -4,10 +4,16 @@ import { Home } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { Contact } from "./pages/Contact";
 import { Navbar } from "./Navbar";
+import { createContext, useState } from "react";
+
+export const AppContext = createContext();
 
 function App() {
+
+  const [username, setUsername] = useState("Nidhish")
   return (
     <div className="App">
+      <AppContext.Provider value={{username,setUsername}}>   {/*  using context api   &&  used in home page */}
       <Router>
         <Navbar />
         <Routes>
@@ -17,6 +23,7 @@ function App() {
           <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
         </Routes>
       </Router>
+      </AppContext.Provider>
     </div>
   );
 }
