@@ -28,6 +28,7 @@ function App() {
       pass += str.charAt(Math.floor(Math.random() * str.length));
     }
 
+
     setPassword(pass);
   }, [length, numberAllowed, specialAllowed, setPassword]);
 
