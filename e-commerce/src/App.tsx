@@ -1,6 +1,7 @@
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
+import AboutUs from './components/AboutUs';
 
 function App() {
 
@@ -19,9 +20,9 @@ function App() {
   }, []);
   return (
     <>
-    <div>
-      
-    </div>
+      <div className="bg-gray-50 min-h-screen">
+        <AboutUs />
+      </div>
     </>
   )
 }
